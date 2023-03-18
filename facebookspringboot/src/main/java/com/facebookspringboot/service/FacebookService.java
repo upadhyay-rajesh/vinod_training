@@ -22,4 +22,24 @@ public class FacebookService implements FacebookServiceInterface{
 		return fd.findAll();
 	}
 
+	@Override
+	public int createProfileService(FacebookUser fuser) {
+		fd.save(fuser);
+		return 1;
+	}
+
+	@Override
+	public int editProfileService(FacebookUser f) {
+		// TODO Auto-generated method stub
+		fd.saveAndFlush(f);
+		return 1;
+	}
+
+	@Override
+	public int deleteProfileService(String a) {
+		// TODO Auto-generated method stub
+		fd.deleteById(a);
+		return 1;
+	}
+
 }
