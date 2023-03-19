@@ -1,6 +1,7 @@
 package com.facebookspringboot.controller;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,8 +21,11 @@ public class FacebookController {
 	@Autowired
 	FacebookServiceInterface fs;
 	
+	Logger log=Logger.getLogger("FacebookController");
+	
 	@GetMapping("showAllRecord")
 	public List<FacebookUser> showRecord() {
+		log.info("you are inside show record method");
 		return fs.getAllProfileService();
 	}
 	@PostMapping("createRecord")
