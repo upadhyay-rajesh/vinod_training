@@ -41,5 +41,10 @@ public class FacebookController {
 		int i=fs.deleteProfileService(a);
 		return "profile deleted";
 	}
+	@PostMapping("login")
+	public String loginRecord(@RequestBody FacebookUser f) {
+		FacebookUser i=fs.loginProfileService(f);
+		return "login success";
+	}
 
 }

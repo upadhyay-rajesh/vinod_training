@@ -42,4 +42,10 @@ public class FacebookService implements FacebookServiceInterface{
 		return 1;
 	}
 
+	@Override
+	public FacebookUser loginProfileService(FacebookUser f) {
+		// TODO Auto-generated method stub
+		return fd.login(f.getEmail(), f.getPassword());
+	}
+
 }

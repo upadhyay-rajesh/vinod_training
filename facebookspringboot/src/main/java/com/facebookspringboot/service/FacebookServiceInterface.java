@@ -12,4 +12,6 @@ public interface FacebookServiceInterface {
 	public int editProfileService(FacebookUser f);
 
 	public int deleteProfileService(String a);
+
+	public FacebookUser loginProfileService(FacebookUser f);
 }
